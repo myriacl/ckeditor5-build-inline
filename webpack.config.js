@@ -23,7 +23,7 @@ module.exports = {
 		// The name under which the editor will be exported.
 		library: 'InlineEditor',
 
-		path: path.resolve( __dirname, 'build' ),
+		path: path.resolve( __dirname, '../../public/InlineEditor' ),
 		filename: 'ckeditor.js',
 		libraryTarget: 'umd',
 		libraryExport: 'default'

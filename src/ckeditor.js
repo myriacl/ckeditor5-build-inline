@@ -28,31 +28,47 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
+import Font from '@ckeditor/ckeditor5-font/src/font';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+
+
+
 export default class InlineEditor extends InlineEditorBase {}
 
 // Plugins to include in the build.
 InlineEditor.builtinPlugins = [
 	Essentials,
-	UploadAdapter,
+	//UploadAdapter,
 	Autoformat,
 	Bold,
 	Italic,
 	BlockQuote,
 	CKFinder,
-	EasyImage,
+	//EasyImage,
 	Heading,
-	Image,
-	ImageCaption,
-	ImageStyle,
-	ImageToolbar,
-	ImageUpload,
+	//Image,
+	//ImageCaption,
+	//ImageStyle,
+	//ImageToolbar,
+	//ImageUpload,
 	Link,
 	List,
-	MediaEmbed,
+	//MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+
+	Font,
+	Alignment,
+	//LineHeight,
+
+	Underline,
+	Strikethrough
+	
 ];
 
 // Editor configuration.
@@ -61,15 +77,18 @@ InlineEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'fontSize',
+			//'lineHeight',
+			'fontColor',
+			'alignment',
 			'bold',
 			'italic',
+			'underline',
+			'strikethrough',
 			'link',
 			'bulletedList',
 			'numberedList',
-			'imageUpload',
-			'blockQuote',
 			'insertTable',
-			'mediaEmbed',
 			'undo',
 			'redo'
 		]
